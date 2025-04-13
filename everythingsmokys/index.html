@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything Smokys</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <title>Register Your Business</title>
 </head>
 <body>
-  <h1>Register Your Business with Everything Smokys</h1>
-  <form action="http://localhost:3000/api/businesses" method="POST">
-    <label>Business Name:<br><input type="text" name="name" required></label><br><br>
-    <label>Description:<br><textarea name="description" required></textarea></label><br><br>
-    <label>Location:<br><input type="text" name="location" required></label><br><br>
-    <label>Contact Email:<br><input type="email" name="email" required></label><br><br>
-    <label>Logo/Image URL:<br><input type="url" name="imageUrl"></label><br><br>
-    <button type="submit">Submit Business</button>
-  </form>
-  
+  <header>
+    <h1>Everythingsmokys.com with a Y</h1>
+    <p>Why? Because we have everything!</p>
+  </header>
+
+  <section>
+    <img src="https://source.unsplash.com/1600x900/?gatlinburg,tennessee" alt="Gatlinburg Tennessee" style="width:100%; max-height:500px; object-fit:cover;" />
+  </section>
+
+  <main style="text-align:center; padding:2rem;">
+    <h2>Welcome to Everything Smokys</h2>
+    <p>Discover the best local businesses, attractions, and more!</p>
+    <a href="business.html">
+      <button style="padding: 1rem 2rem; font-size: 1.25rem;">Register Your Business</button>
+    </a>
+  </main>
+
+  <footer style="text-align:center; margin-top:2rem;">
+    <p>&copy; 2025 Everything Smokys. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-
-
-
