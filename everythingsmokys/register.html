@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Your Business</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Register Your Business with Everything Smokys</h1>
+  <form action="http://localhost:3000/api/businesses" method="POST">
+    <label>Business Name:<br><input type="text" name="name" required></label><br><br>
+    <label>Description:<br><textarea name="description" required></textarea></label><br><br>
+    <label>Location:<br><input type="text" name="location" required></label><br><br>
+    <label>Contact Email:<br><input type="email" name="email" required></label><br><br>
+    <label>Logo/Image URL:<br><input type="url" name="imageUrl"></label><br><br>
+    <button type="submit">Submit Business</button>
+  </form>
+</body>
+</html>
