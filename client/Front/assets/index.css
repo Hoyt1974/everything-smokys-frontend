@@ -1,5 +1,5 @@
 body {
-  background: url('./smoky-sunrise.png') no-repeat center center fixed;
+  background: url('/smoky-sunrise.png') no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
   color: #fff;
@@ -17,7 +17,7 @@ body {
   height: 100vh;
 } */
 .hero {
-  background-image: url('./smoky-sunrise.png');
+  background-image: url('/smoky-sunrise.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
