@@ -1,5 +1,6 @@
 .hero {
-  background-image: url('/smoky-sunrise.png');
+  background-image: url('./assets/smoky-sunrise.png');
+
   background-size: cover;
   background-position: center;
   height: 50vh;
