@@ -1,59 +1,105 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #111;
-  }
-  
-  .hero {
-    background-image: url("../assets/smoky-sunrise.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px #000;
-  }
-  
-  .hero-content h2 {
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 3px #000;
-  }
-  
-  .cta-button {
-    background-color: #c0392b;
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    cursor: pointer;
-  }
-  
-  .cta-button:hover {
-    background-color: #e74c3c;
-  }
-  
-  .main-section {
-    text-align: center;
-    padding: 2rem;
-    color: #333;
-    background-color: #fff;
-  }
-  
-  footer {
-    background-color: #222;
-    text-align: center;
-    padding: 1rem;
-    color: white;
-  }
+  background: url('./assets/smoky-sunrise.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/smoky-sunrise.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+} */
+.hero {
+  background-image: url('../assets/smoky-sunrise.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-shadow: 2px 2px 4px #000;
+}
 
+.hero-content {
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #e74c3c;
+}
+
+
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+}
+
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+  }
+  
+  input,
+  button {
+    padding: 0.7rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  input {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+  }
+  
+  button {
+    background-color: #c23e3e;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a93232;
+  }
   
