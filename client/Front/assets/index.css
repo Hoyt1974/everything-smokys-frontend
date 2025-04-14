@@ -1,23 +1,8 @@
-/* body {
-  background: url('/smoky-sunrise.png') no-repeat center center fixed;
-  background-size: cover;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0; */
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('/smoky-sunrise.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-.hero {
-  background-image: url('/smoky-sunrise.png');
+  background-image: url('assets/smoky-sunrise.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,6 +16,36 @@ body {
   padding: 2rem;
   text-shadow: 2px 2px 4px #000;
 }
+
+.hero-content {
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+}
+
+  
+/* .hero {
+  background-image: url('/smoky-sunrise.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-shadow: 2px 2px 4px #000;
+} */
 
 .hero-content {
   margin-top: 2rem;
