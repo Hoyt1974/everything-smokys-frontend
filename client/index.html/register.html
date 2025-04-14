@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Your Business</title>
+  <link rel="stylesheet" href="assets/index.css" />
+</head>
+<body>
+  <main class="main-section">
+    <h2>Register Your Business</h2>
+    <form action="http://localhost:3000/api/businesses" method="POST">
+      <label>Business Name:<br /><input type="text" name="name" required /></label><br /><br />
+      <label>Description:<br /><textarea name="description" required></textarea></label><br /><br />
+      <label>Location:<br /><input type="text" name="location" required /></label><br /><br />
+      <label>Contact Email:<br /><input type="email" name="email" required /></label><br /><br />
+      <label>Logo/Image URL:<br /><input type="url" name="imageUrl" /></label><br /><br />
+      <button type="submit" class="cta-button">Submit Business</button>
+    </form>
+  </main>
+</body>
+</html>
+
