@@ -1,12 +1,12 @@
-/* body {
+body {
   background: url('./assets/smoky-sunrise.png') no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
   color: #fff;
   margin: 0;
   padding: 0;
-} */
-body {
+}
+/* body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -15,17 +15,44 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-}
-
+} */
 .hero {
-  background-image: url("public/smoky-sunrise.png");
+  background-image: url('../assets/smoky-sunrise.png');
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
-  text-align: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-shadow: 2px 2px 4px #000;
 }
+
+.hero-content {
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #e74c3c;
+}
+
+
+
 
 .hero h1 {
   font-size: 3rem;

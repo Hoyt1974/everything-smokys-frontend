@@ -1,11 +1,16 @@
-body {
-  margin: 0;
-  padding: 50px;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
-  text-align: center;
+.hero {
+  background-image: url('/smoky-sunrise.png');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
 }
+
 
 .container {
   background: white;
