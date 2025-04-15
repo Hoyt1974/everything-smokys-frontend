@@ -4,20 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register Your Business</title>
-  <link rel="stylesheet" href="assets/index.css" />
+  <link rel="stylesheet" href="./assets/index.css" />
 </head>
 <body>
   <main class="main-section">
     <h2>Register Your Business</h2>
-    <form action="http://localhost:3000/api/businesses" method="POST">
-      <label>Business Name:<br /><input type="text" name="name" required /></label><br /><br />
-      <label>Description:<br /><textarea name="description" required></textarea></label><br /><br />
-      <label>Location:<br /><input type="text" name="location" required /></label><br /><br />
-      <label>Contact Email:<br /><input type="email" name="email" required /></label><br /><br />
-      <label>Logo/Image URL:<br /><input type="url" name="imageUrl" /></label><br /><br />
+    <form id="registerForm">
+      <label>Business Name:<br />
+        <input type="text" id="name" name="name" required />
+      </label><br /><br />
+
+      <label>Description:<br />
+        <textarea id="description" name="description" required></textarea>
+      </label><br /><br />
+
+      <label>Location:<br />
+        <input type="text" id="location" name="location" required />
+      </label><br /><br />
+
+      <label>Contact Email:<br />
+        <input type="email" id="email" name="email" required />
+      </label><br /><br />
+
+      <label>Logo/Image URL:<br />
+        <input type="url" id="imageUrl" name="imageUrl" />
+      </label><br /><br />
+
+      <label>Business Website URL:<br />
+        <input type="url" id="url" name="url" required />
+      </label><br /><br />
+
+      <label>Upload Business Image:<br />
+        <input type="file" id="imageFile" name="imageFile" accept="image/*" />
+      </label><br /><br />
+
       <button type="submit" class="cta-button">Submit Business</button>
     </form>
   </main>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById("name").value,
+        description: document.getElementById("description").value,
+        location: document.getElementById("location").value,
+        email: document.getElementById("email").value,
+        imageUrl: document.getElementById("imageUrl").value,
+        url: document.getElementById("url").value
+      };
+
+      try {
+        const response = await fetch("/api/businesses", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          alert("Business registered successfully!");
+          document.getElementById("registerForm").reset();
+        } else {
+          alert("Error submitting. Please try again.");
+        }
+      } catch (err) {
+        alert("Server error: " + err.message);
+      }
+    });
+  </script>
 </body>
 </html>
-
