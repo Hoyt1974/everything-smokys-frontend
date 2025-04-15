@@ -7,6 +7,15 @@
     "email": "hoytjmatthews@gmail.com",
     "createdAt": "2025-04-10T02:29:08.351Z",
     "trialExpiresAt": "2025-06-09T02:29:08.351Z"
+  },
+  {
+    "name": "Test3",
+    "slug": "test3",
+    "description": "Test3",
+    "location": "Test3",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-15T01:55:13.506Z",
+    "trialExpiresAt": "2025-06-14T01:55:13.506Z"
   }
- 
 ]
