@@ -7,32 +7,6 @@
     "email": "hoytjmatthews@gmail.com",
     "createdAt": "2025-04-10T02:29:08.351Z",
     "trialExpiresAt": "2025-06-09T02:29:08.351Z"
-  },
-  {
-    "name": "Smokyfans",
-    "slug": "smokyfans",
-    "description": "Awesome Page for all Smoky Fans!",
-    "location": "Sevierville TN.",
-    "email": "hackinghoyt@gmail.com",
-    "createdAt": "2025-04-14T16:53:09.187Z",
-    "trialExpiresAt": "2025-06-13T16:53:08.930Z"
-  },
-  {
-    "name": "Smokyfans",
-    "slug": "smokyfans",
-    "description": "Awesome Page for all Smoky Fans!",
-    "location": "Sevierville TN.",
-    "email": "hackinghoyt@gmail.com",
-    "createdAt": "2025-04-14T17:27:07.433Z",
-    "trialExpiresAt": "2025-06-13T17:27:07.433Z"
-  },
-  {
-    "name": "Test1",
-    "slug": "test1",
-    "description": "Test1",
-    "location": "Test1",
-    "email": "hoytjmatthews@gmail.com",
-    "createdAt": "2025-04-15T00:57:51.305Z",
-    "trialExpiresAt": "2025-06-14T00:57:51.305Z"
   }
+ 
 ]
