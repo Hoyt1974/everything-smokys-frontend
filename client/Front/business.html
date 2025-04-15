@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Businesses</title>
+  <link rel="stylesheet" href="./assets/index.css" />
+</head>
+<body>
+  <main class="main-section">
+    <h2>Featured Local Businesses</h2>
+    <div id="businessList"></div>
+  </main>
+
+  <script>
+    async function fetchBusinesses() {
+      try {
+        const response = await fetch("http://localhost:3000/businesses");
+        const html = await response.text();
+        document.getElementById("businessList").innerHTML = html;
+      } catch (err) {
+        document.getElementById("businessList").innerHTML = "<p>Could not load businesses.</p>";
+        console.error("Error loading businesses:", err);
+      }
+    }
+
+    fetchBusinesses();
+  </script>
+</body>
+</html>
