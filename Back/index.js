@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 
 // Endpoint to accept business data
 app.post('/api/businesses', (req, res) => {
-  const { name, description, location, email } = req.body;
+  const { name, description, location, email, url } = req.body;
+
   const imageUrl = req.body.imageUrl || ""; // fallback in case it's missing
   
 
@@ -28,9 +29,12 @@ app.post('/api/businesses', (req, res) => {
     description,
     location,
     email,
+    imageUrl,
+    url, // ✅ add this
     createdAt: new Date().toISOString(),
     trialExpiresAt: expiresAt.toISOString()
   };
+  
 
   const filePath = path.join(__dirname, 'businesses.json');
   let businesses = [];
@@ -90,8 +94,8 @@ app.get('/businesses', (req, res) => {
 
     const businessList = businesses.map(biz => `
       <li>
-        <a href="/business/${biz.slug}">
-          ${biz.imageUrl ? `<img src="${biz.imageUrl}" alt="${biz.name} logo" class="thumb"/>` : ''}
+        <a href="${biz.url}" target="_blank">
+          <img src="${biz.imageUrl}" alt="${biz.name} logo" class="thumb"/>
           <div class="biz-info">
             <h3>${biz.name}</h3>
             <p>${biz.description}</p>
@@ -99,6 +103,7 @@ app.get('/businesses', (req, res) => {
         </a>
       </li>
     `).join('');
+    
 
     res.send(`
       <html>
