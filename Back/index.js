@@ -41,8 +41,36 @@ app.post('/api/businesses', (req, res) => {
 
   businesses.push(newBusiness);
   fs.writeFileSync(filePath, JSON.stringify(businesses, null, 2));
+  res.send(`
+    <html>
+      <head>
+        <meta http-equiv="refresh" content="4; url=/businesses" />
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #fff;
+          }
+          h2 {
+            font-size: 2em;
+            color: #333;
+          }
+          p {
+            margin-top: 20px;
+            color: #666;
+          }
+        </style>
+      </head>
+      <body>
+        <h2>Thanks, ${name} is now live on Everything Smokys! 🎉</h2>
+        <p>Redirecting you to all businesses...</p>
+      </body>
+    </html>
+  `);
+  
 
-  res.send(`<h2>Thanks, ${name} is now live on Everything Smokys! 🎉</h2>`);
+  // res.send(`<h2>Thanks, ${name} is now live on Everything Smokys! 🎉</h2>`);
 });
 console.log("✅ Server starting... just before /businesses route");
 
