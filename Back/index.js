@@ -91,6 +91,19 @@ app.get('/businesses', (req, res) => {
 
     const businesses = JSON.parse(fs.readFileSync(filePath));
     console.log("✅ Parsed businesses.json");
+    
+    const businessList = businesses.map(biz => `
+      <li>
+        <a href="${biz.url}" target="_blank">${biz.name}</a>
+        <img src="${biz.imageUrl}" alt="${biz.name} logo" class="thumb"/>
+        <div class="biz-info">
+          <h3>${biz.name}</h3>
+          <p>${biz.description}</p>
+        </div>
+      </li>
+    `).join('');
+    
+    
 
     
 
@@ -102,7 +115,7 @@ app.get('/businesses', (req, res) => {
         </head>
         <body>
           <h1 style="text-align:center;">Business Directory</h1>
-          // <ul>${businessList}</ul> 
+          <ul>${businessList}</ul> 
           <ul>${businesses}</ul>
 
         </body>
