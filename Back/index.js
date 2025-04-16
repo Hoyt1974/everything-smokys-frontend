@@ -2,10 +2,16 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors'); // <-- ADD THIS
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors()); // <-- AND THIS
+
+const cors = require('cors');
+app.use(cors());
+// Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,26 +19,26 @@ app.use(bodyParser.json());
 
 // Endpoint to accept business data
 app.post('/api/businesses', (req, res) => {
-  const { name, description, location, email, url } = req.body;
+  const { name, description, location, email, ImageUrl, url } = req.body;
 
   const imageUrl = req.body.imageUrl || ""; // fallback in case it's missing
   
 
-
   const slug = name.toLowerCase().replace(/\s+/g, '-');
-  const expiresAt = new Date();
-  expiresAt.setDate(expiresAt.getDate() + 60); // 60-day trial
-
+  const createdAt = new Date();
+  const expireAt = new Date();
+  expireAt.setDate(createdAt.getDate() + 60); // 60-day trial
+  
   const newBusiness = {
     name,
     slug,
     description,
     location,
     email,
-    imageUrl,
-    url, // ✅ add this
-    createdAt: new Date().toISOString(),
-    trialExpiresAt: expiresAt.toISOString()
+    imageUrl: imageUrl || "",
+    url,
+    createdAt: createdAt.toISOString(),
+    trialExpireAt: expireAt.toISOString()
   };
   
 
@@ -45,33 +51,8 @@ app.post('/api/businesses', (req, res) => {
 
   businesses.push(newBusiness);
   fs.writeFileSync(filePath, JSON.stringify(businesses, null, 2));
-  res.send(`
-    <html>
-      <head>
-        <meta http-equiv="refresh" content="4; url=/businesses" />
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 100px 20px;
-            background-color: #fff;
-          }
-          h2 {
-            font-size: 2em;
-            color: #333;
-          }
-          p {
-            margin-top: 20px;
-            color: #666;
-          }
-        </style>
-      </head>
-      <body>
-        <h2>Thanks, ${name} is now live on Everything Smokys! 🎉</h2>
-        <p>Redirecting you to all businesses...</p>
-      </body>
-    </html>
-  `);
+  
+  
   
 
   // res.send(`<h2>Thanks, ${name} is now live on Everything Smokys! 🎉</h2>`);
