@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Local Businesses</title>
   <link rel="stylesheet" href="./assets/index.css" />
 </head>
 <body>
   <main class="main-section">
-    <h2>Featured Local Businesses</h2>
-    <div id="businessList"></div>
+    <h2>Featured Local Businesses:</h2>
+    <div id="businessList">Loading...</div>
   </main>
 
   <script>
     async function fetchBusinesses() {
       try {
-        const response = await fetch("http://localhost:3000/businesses");
+        const response = await fetch('http://localhost:3000/businesses');
         const html = await response.text();
-        document.getElementById("businessList").innerHTML = html;
+
+        // Pull just the <ul>...</ul> portion from the backend response
+        const match = html.match(/<ul>([\s\S]*?)<\/ul>/);
+        const list = match ? `<ul>${match[1]}</ul>` : '<p>No businesses found.</p>';
+        document.getElementById('businessList').innerHTML = list;
       } catch (err) {
-        document.getElementById("businessList").innerHTML = "<p>Could not load businesses.</p>";
+        document.getElementById('businessList').innerHTML = "<p>Could not load businesses.</p>";
         console.error("Error loading businesses:", err);
       }
     }
@@ -28,3 +31,4 @@
   </script>
 </body>
 </html>
+

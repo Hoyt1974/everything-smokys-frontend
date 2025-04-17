@@ -9,7 +9,7 @@ const PORT = 3000;
 
 app.use(cors()); // <-- AND THIS
 
-const cors = require('cors');
+// const cors = require('cors');
 app.use(cors());
 // Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -84,10 +84,8 @@ app.get('/businesses', (req, res) => {
       </li>
     `).join('');
     
+  
     
-
-    
-
     res.send(`
       <html>
         <head>
