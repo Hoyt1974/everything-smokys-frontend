@@ -20,5 +20,93 @@
     "url": "http://www.hackinghoyt.com",
     "createdAt": "2025-04-17T22:19:17.950Z",
     "trialExpireAt": "2025-06-16T22:19:17.950Z"
+  },
+  {
+    "name": "Squeaky",
+    "slug": "squeaky",
+    "description": "I am a cat!",
+    "location": "Whereever I want!",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T22:56:25.356Z",
+    "trialExpireAt": "2025-06-16T22:56:25.356Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T22:57:46.937Z",
+    "trialExpireAt": "2025-06-16T22:57:46.937Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T23:02:54.076Z",
+    "trialExpireAt": "2025-06-16T23:02:54.076Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T23:02:55.702Z",
+    "trialExpireAt": "2025-06-16T23:02:55.702Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T23:02:58.768Z",
+    "trialExpireAt": "2025-06-16T23:02:58.768Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T23:03:19.781Z",
+    "trialExpireAt": "2025-06-16T23:03:19.781Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T23:04:16.410Z",
+    "trialExpireAt": "2025-06-16T23:04:16.410Z"
+  },
+  {
+    "name": "a",
+    "slug": "a",
+    "description": "a",
+    "location": "a",
+    "email": "hoytjmatthews@gmail.com",
+    "imageUrl": "http://www.hackinghoyt.com",
+    "url": "http://www.hackinghoyt.com",
+    "createdAt": "2025-04-17T23:04:20.899Z",
+    "trialExpireAt": "2025-06-16T23:04:20.899Z"
   }
 ]
