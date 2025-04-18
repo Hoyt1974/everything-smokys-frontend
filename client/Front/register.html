@@ -41,16 +41,19 @@
   <script>
     document.getElementById('registerForm').addEventListener('submit', async function (e) {
       e.preventDefault();
-
+      console.log("🚀 Form submission started.");
+    
       const data = {
         name: document.getElementById('name').value,
         description: document.getElementById('description').value,
         location: document.getElementById('location').value,
         email: document.getElementById('email').value,
         imageUrl: document.getElementById('imageUrl').value,
-        url: document.getElementById('url').value,
+        url: document.getElementById('url').value
       };
-
+    
+      console.log("📦 Data to send:", data);
+    
       try {
         const response = await fetch('http://localhost:3000/api/businesses', {
           method: 'POST',
@@ -59,25 +62,30 @@
           },
           body: JSON.stringify(data)
         });
-
+    
+        console.log("✅ Fetch completed. Response status:", response.status);
+    
         if (response.ok) {
           alert('Business registered successfully!');
           document.getElementById('registerForm').reset();
-
-          // ⏳ Redirect after 2 seconds to local business listing
+    
+          console.log("🕒 Waiting 2 seconds before redirecting...");
+    
           setTimeout(() => {
-            window.location.href = '/business.html';
-
-
+            console.log("➡️ Redirecting to /business/index.html");
+            window.location.href = '/business/index.html'; // Update this to the exact path that exists
           }, 2000);
         } else {
+          console.error("❌ Response not OK:", response.status);
           alert('Error submitting. Please try again.');
         }
       } catch (err) {
+        console.error("🔥 Server error:", err.message);
         alert('Server error: ' + err.message);
       }
     });
-  </script>
+    </script>
+    
 </body>
 </html>
 

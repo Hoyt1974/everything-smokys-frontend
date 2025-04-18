@@ -95,7 +95,7 @@ app.get('/businesses', (req, res) => {
         <body>
           <h1 style="text-align:center;">Business Directory</h1>
           <ul>${businessList}</ul> 
-          <ul>${businesses}</ul>
+         
 
         </body>
       </html>
